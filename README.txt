@@ -1,8 +1,12 @@
-元狸图MCP 公开分发包
+元狸图MCP 公开分发包 v0.1.1
 
 内容：
 - yuanlitu-mcp.exe：MCP 服务端，可直接作为 stdio MCP server 启动，不需要分发源码。
-- yuanlitu-mcp-service_v0.1.0.eext：嘉立创 EDA / EasyEDA 专业版扩展。
+- yuanlitu-mcp-service_v0.1.1.eext：嘉立创 EDA / EasyEDA 专业版扩展。
+
+v0.1.1 修复：
+- 修复扩展状态悬浮窗中文乱码。
+- 修复等待状态端口范围显示错误，统一显示 49640-49649。
 
 默认连接：
 - 端口范围：49640-49649

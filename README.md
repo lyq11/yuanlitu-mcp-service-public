@@ -8,9 +8,16 @@
 
 请到 GitHub Releases 下载最新版本：
 
-- `yuanlitu-mcp-private-v0.1.0-win-x64.zip`：完整分发包
+- `yuanlitu-mcp-private-v0.1.1-win-x64.zip`：完整分发包
 - `yuanlitu-mcp.exe`：MCP 服务端单文件可执行程序
-- `yuanlitu-mcp-service_v0.1.0.eext`：嘉立创 EDA / EasyEDA 专业版扩展
+- `yuanlitu-mcp-service_v0.1.1.eext`：嘉立创 EDA / EasyEDA 专业版扩展
+
+## 版本
+
+### v0.1.1
+
+- 修复扩展状态悬浮窗中文乱码。
+- 修复等待状态端口范围显示错误，统一显示 `49640-49649`。
 
 ## 默认连接参数
 
