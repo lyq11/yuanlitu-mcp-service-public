@@ -1,12 +1,12 @@
-元狸图 MCP 公开分发包 v0.1.1
+元狸图 MCP 公开分发包 v0.1.34（Windows x64）
 
 内容：
-- yuanlitu-mcp.exe：MCP 服务端，可直接作为 stdio MCP server 启动。
-- yuanlitu-mcp-service_v0.1.1.eext：嘉立创 EDA / EasyEDA 专业版扩展。
+- yuanlitu-mcp.exe：MCP 服务端 v0.1.33，可直接作为 stdio MCP server 启动。
+- yuanlitu-mcp-service_v0.1.34.eext：嘉立创 EDA / EasyEDA 专业版扩展。
 
 功能范围：
 - 连接 EasyEDA 专业版当前工程。
-- 读取原理图页、器件、引脚、导线、网络和属性。
+- 读取原理图页、器件、引脚、导线、网络、属性和自由文本注释。
 - 搜索 EasyEDA / LCSC 元器件库。
 - 放置器件、连线、创建电源/地网络、添加文本说明。
 - 标记未连接引脚。
@@ -48,6 +48,7 @@ Claude Desktop / Trae 配置示例：
 3. 在 Codex / Claude / Trae 的 MCP 配置中填写 exe 路径。
 4. 打开 EDA 工程和原理图。
 5. 重启 MCP Host 或刷新 MCP 服务。
+6. 在扩展「连接状态」中按需选择「切换主原理图」。
 
 注意：
 - 请把 C:/Tools/yuanlitu-mcp/yuanlitu-mcp.exe 改成实际路径。

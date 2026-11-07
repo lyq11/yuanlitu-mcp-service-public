@@ -6,7 +6,7 @@
 
 ## 当前版本
 
-首个可用测试版：`v0.1.1`
+最新公开发行版为 **v0.1.34**，包含 Windows x64 MCP 服务端 **v0.1.33** 和 EasyEDA 扩展 **v0.1.34**。
 
 默认连接参数：
 
@@ -20,7 +20,7 @@
 
 - 连接状态检查：确认 EasyEDA 扩展、当前工程、当前原理图和当前页面。
 - 原理图页读取：列出工程内的原理图和页面。
-- 原理图结构化读取：读取器件、引脚、导线、网络标签、网络和器件属性。
+- 原理图结构化读取：读取器件、引脚、导线、网络标签、网络、器件属性和自由文本注释。
 - 局部区域检查：只读取指定矩形区域内的器件和导线。
 - 元器件库搜索：按型号、封装、参数搜索 EasyEDA / LCSC 器件。
 - 器件放置：把库器件放入当前原理图页面。
@@ -50,13 +50,14 @@
 
 到 GitHub Releases 下载最新版本：
 
-[https://github.com/lyq11/yuanlitu-mcp-service-public/releases](https://github.com/lyq11/yuanlitu-mcp-service-public/releases)
+[下载 v0.1.34](https://github.com/lyq11/yuanlitu-mcp-service-public/releases/tag/v0.1.34)
 
-发布包通常包含：
+发布附件包括
 
-- `yuanlitu-mcp-private-v0.1.1-win-x64.zip`：完整 Windows 分发包。
+- `yuanlitu-mcp-v0.1.34-win-x64.zip`：完整 Windows 分发包。
 - `yuanlitu-mcp.exe`：MCP 服务端单文件可执行程序。
-- `yuanlitu-mcp-service_v0.1.1.eext`：嘉立创 EDA / EasyEDA 专业版扩展。
+- `yuanlitu-mcp-service_v0.1.34.eext`：嘉立创 EDA / EasyEDA 专业版扩展。
+- `SHA256SUMS.txt`：发布文件的 SHA-256 校验值。
 
 ## 安装步骤
 
@@ -71,7 +72,7 @@
 4. 打开 EDA 工程和原理图页面。
 5. 在 MCP Host 中配置 `yuanlitu-mcp.exe`。
 6. 重启 MCP Host，或在 Host 中刷新 MCP 连接。
-7. 在 EDA 插件菜单中查看连接状态；必要时点击“重新连接”。
+7. 在 EDA 插件菜单中打开「连接状态」，按需重新连接或选择「切换主原理图」。
 
 ## Codex 配置
 
@@ -142,7 +143,7 @@ approval_mode = "approve"
 
 - 先让 AI 执行连接检查，再读取当前原理图页面。
 - 对写入类操作，建议先让 AI 说明将要修改的区域和器件。
-- 大范围修改前，确认当前原理图是 `[main]`，备份页应标记为 `[backup]`。
+- 大范围修改前，在「连接状态」确认 MCP 选中的主原理图。
 - 如果 EDA 插件显示等待连接，检查 MCP Host 是否已启动 `yuanlitu-mcp.exe`，以及端口 `49640-49649` 是否被占用。
 
 ## 常见问题
@@ -160,6 +161,12 @@ approval_mode = "approve"
 当前 exe 未做代码签名，Windows 可能提示未知发布者。正式商业发布建议增加代码签名。
 
 ## 版本记录
+
+### v0.1.34
+
+- 「连接状态」窗口新增「切换主原理图」，按工程保存选择。
+- 原理图页面读取新增自由文本、位置和边界。
+- Windows x64 发布包内含服务端 v0.1.33 和扩展 v0.1.34。
 
 ### v0.1.1
 
