@@ -2,7 +2,7 @@
 
 元狸图 MCP 是面向嘉立创 EDA / EasyEDA 专业版的本地 MCP 工具。它把 EDA 内的原理图能力通过本机白名单 RPC 暴露给 Codex、Claude、Trae 等 MCP Host，让 AI 可以读取、检查并安全修改当前打开的原理图。
 
-这个仓库是公开分发仓库，只提供二进制发布包和使用说明，不包含服务端源代码。
+这个公开分发仓库提供二进制发布包、部署 Skill 和使用说明。
 
 ## 当前版本
 
@@ -49,6 +49,26 @@
 - 源代码公开分发。公开仓库只发布 exe 和 EasyEDA 扩展包。
 
 ## 下载
+
+### 用 Codex 一键部署
+
+在 Codex 发出这条请求，即可使用部署 Skill。
+
+~~~text
+请从 https://github.com/lyq11/yuanlitu-mcp-service-public/tree/main/skills/yuanlitu-mcp-deploy 安装并使用 yuanlitu-mcp-deploy Skill，帮我部署元狸图 MCP。
+~~~
+
+Skill 支持 Windows x64。它会下载发行包、校验 SHA-256、安装本地服务和扩展文件，并配置 Codex。修改已有配置前会创建备份。安装后，在嘉立创 EDA 专业版的 **高级 → 扩展管理器 → 导入** 中选择 Skill 返回的 `.eext`，然后刷新 MCP 客户端。
+
+也可 [下载 PowerShell 部署脚本](https://raw.githubusercontent.com/lyq11/yuanlitu-mcp-service-public/main/skills/yuanlitu-mcp-deploy/scripts/install.ps1)，保存后从所在目录运行。
+
+~~~powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+~~~
+
+为其他 MCP 客户端准备安装文件时，可加 `-ArtifactsOnly`，再使用脚本返回的服务端路径配置客户端。
+
+### 手动下载
 
 到 GitHub Releases 下载最新版本：
 
