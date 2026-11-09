@@ -55,7 +55,7 @@
 在 Codex 发出这条请求，即可使用部署 Skill。
 
 ~~~text
-请从 https://github.com/lyq11/yuanlitu-mcp-service-public/tree/main/skills/yuanlitu-mcp-deploy 安装并使用 yuanlitu-mcp-deploy Skill，帮我部署元狸图 MCP。
+请用 Git 从 https://github.com/lyq11/yuanlitu-mcp-service-public/tree/main/skills/yuanlitu-mcp-deploy 安装并使用 yuanlitu-mcp-deploy Skill，帮我部署元狸图 MCP。
 ~~~
 
 Skill 支持 Windows x64。它会下载发行包、校验 SHA-256、安装本地服务和扩展文件，并配置 Codex。修改已有配置前会创建备份。安装后，在嘉立创 EDA 专业版的 **高级 → 扩展管理器 → 导入** 中选择 Skill 返回的 `.eext`，然后刷新 MCP 客户端。
